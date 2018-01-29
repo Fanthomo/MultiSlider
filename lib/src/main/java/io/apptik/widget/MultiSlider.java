@@ -1299,7 +1299,7 @@ public class MultiSlider extends View {
         for (Thumb thumb : mThumbs) {
             if (thumb.getRange() != null) {
                 canvas.save();
-                canvas.translate(paddingStart, 0);
+                canvas.translate(paddingStart, getPaddingTop() - getPaddingBottom());
                 thumb.getRange().draw(canvas);
                 canvas.restore();
             }
